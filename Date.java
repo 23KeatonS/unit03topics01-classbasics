@@ -25,10 +25,10 @@ public class Date {
 
     public String toString(){
         String result = "";
-        if(month<10){
+        if(getMonth()<10){
             result+=0;
         }
-        result+=month+"/";
+        result+=getMonth()+"/";
         if(day<10){
             result+=0;
         }
