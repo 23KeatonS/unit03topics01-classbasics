@@ -29,20 +29,20 @@ public class Date {
             result+=0;
         }
         result+=getMonth()+"/";
-        if(day<10){
+        if(getDay()<10){
             result+=0;
         }
-        result+=day+"/";
-        if(year<1000){
+        result+=getDay()+"/";
+        if(getYear()<1000){
             result+=0;
         }
-        if(year<100){
+        if(getYear()<100){
             result+=0;
         }
-        if(year<10){
+        if(getYear()<10){
             result+=0;
         }
-        result+=year;
+        result+=getYear();
         return result;
     }
     

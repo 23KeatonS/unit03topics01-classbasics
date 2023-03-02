@@ -11,26 +11,38 @@ public class TimeV1 {
     }
 
 
+
+    public int getHours(){
+        return hours;
+    }
+    public int getMinutes(){
+        return minutes;
+    }
+    public int getSeconds(){
+        return seconds;
+    }
+
+
     public String toString(){
         String result = "";
         int newHours;
-        if(hours>=12){
-            newHours = hours-12;
+        if(getHours()>=12){
+            newHours = getHours()-12;
         }else{
-            newHours=hours;
+            newHours=getHours();
         }
         if(newHours<10){
             result+=0;
         }
         result+=newHours+":";
-        if(minutes<10){
+        if(getMinutes()<10){
             result+="0";
         }
-        result+=minutes+":";
-        if(seconds<10){
+        result+=getMinutes()+":";
+        if(getSeconds()<10){
             result+=0;
         }
-        result+=seconds;
+        result+=getSeconds();
         return result;
     }
 
@@ -46,5 +58,7 @@ public class TimeV1 {
         System.out.println(time1);
         TimeV1 time2 = new TimeV1(4,54,7);
         System.out.println(time2);
+        
+        
     }
 }
