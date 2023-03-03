@@ -4,8 +4,11 @@ public class TimeV2 {
     
     
     
-    public TimeV2(int secondsPassed){
-        seconds = secondsPassed;
+    public TimeV2(int hoursPassed,int minutesPassed,int secondsPassed){
+        seconds += secondsPassed;
+        seconds+=minutesPassed*60;
+        seconds+=hoursPassed*3600;
+
     }
 
     public int getHours(){
@@ -55,11 +58,10 @@ public class TimeV2 {
     
     
     public static void main(String[] args) {
-        TimeV2 time1 = new TimeV2(86655);
+        TimeV1 time1 = new TimeV1(24,4,15);
         System.out.println(time1);
-        TimeV2 time2 = new TimeV2(17647);
+        TimeV1 time2 = new TimeV1(4,54,7);
         System.out.println(time2);
         
-    
     }
 }
